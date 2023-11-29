@@ -1,0 +1,51 @@
+
+# Home » Python Exercises » Python Object-Oriented Programming (OOP) Exercise: Classes and Objects Exercises
+# Write a Python program to create a Vehicle class with max_speed and mileage instance attributes.
+
+class Vehicle:
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+    def seating_capacity(self, capacity):
+        return f"The seating capacity of a {self.name} is {capacity} passengers"
+
+# OOP Exercise 2: Create a Vehicle class without any variables and methods
+# class Vehicle:
+#     pass
+# OOP Exercise 3: Create a child class Bus 
+# that will inherit all of the variables and methods of the Vehicle class
+# class bus(Vehicle):
+#     def __init__(self,name,max_speed,mileage):
+#         super().__init__(name,max_speed,mileage)
+#     def print(self):
+#         return "Vehicle name: {} School Volvo Speed: {} Mileage: {}".format(self.name,self.max_speed,self.mileage)
+# x = bus("JOhn",180,12)
+# print(x.print())
+
+#EX4: Create a Bus class that inherits from the Vehicle class.
+# Give the capacity argument of Bus.seating_capacity() a default value of 50.
+# class Bus(Vehicle):
+#     def __init__(self,name,max_speed,mileage):
+#         super().__init__(name,max_speed,mileage)
+#         self.capacity = 100
+#     def result(self):
+#         return super().seating_capacity(self.capacity)
+# x = Bus("bus",100,100)
+# print(x.result())
+
+#OOP Exercise 5: Define a class attribute”color” with a 
+#default value white. I.e., Every Vehicle should be white.
+class Vehicle:
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+        self.color = "white"
+    def result(self):
+        print("Color: {}, Vehicle name: {}, Speed: {}, Mileage: {}".format(self.color,self.name,self.max_speed,self.mileage))
+        
+x = Vehicle("Duc",100,100)
+x.result()
+        
+
